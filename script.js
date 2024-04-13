@@ -120,3 +120,30 @@ getData();
 window.addEventListener('scroll',(data)=>{
     console.log(data);
 })
+let nav = document.querySelector("nav")
+let tl = gsap.timeline();
+tl.from("nav,#logo,.inp-box,#loc",{
+    y : -100,
+    duration : 1,
+    delay:1,
+    opacity:0,
+    stagger:0.3
+});
+tl.from(".top-left,.bottom-left",{
+    x : -100,
+    duration : 1.5,
+    opacity:0,
+    stagger:0.3
+});
+tl.from(".top-right,.top-right-child,.bottom-right",{
+    x : 100,
+    duration : 1.3,
+    opacity:0,
+    stagger:0.3
+});
+tl.from("footer",{
+    y : 100,
+    duration : 1.5,
+    opacity:0,
+    stagger:0.3
+});
