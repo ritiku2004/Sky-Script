@@ -2,7 +2,7 @@ let url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=dewas&days=7';
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '0b67e906f2msh2d2e43cdb38469fp19465djsn660da1f79dea',
+        'X-RapidAPI-Key': 'Enter Your Key Here',
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
     }
 };
@@ -80,19 +80,19 @@ function setData() {
     day3Data.textContent = result.forecast.forecastday[2].day.condition.text;
 }
 function sendMail(a) {
-    let top = "Sky Script";
-    let bdy =" City =>" + a;
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "visiters2004@gmail.com", 
-        Password: "88879B73FD61A3B63466670E6283B72D454C",
-        To: 'ritikupadhyay838@gmail.com',
-        From: 'ritikupadhyay838@gmail.com',
-        Subject: top,
-        Body: bdy
-    }).then(
-        console.log("done")
-    );
+    // let top = "Sky Script";
+    // let bdy =" City =>" + a;
+    // Email.send({
+    //     Host: "smtp.elasticemail.com",
+    //     Username: "Your Username", 
+    //     Password: "SMTP Password",
+    //     To: 'Receiver mail',
+    //     From: 'Sender mail',
+    //     Subject: top,
+    //     Body: bdy
+    // }).then(
+    //     console.log("done")
+    // );
 }
 inp.addEventListener("keypress", (event) => {
     let key = event.key;
@@ -147,3 +147,4 @@ tl.from("footer",{
     opacity:0,
     stagger:0.3
 });
+
